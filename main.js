@@ -56,7 +56,7 @@ class ImageResize{
         var reader = new FileReader();
         reader.readAsArrayBuffer(file);
 
-        reader.onload = function (event) {
+        reader.onload = (event) => {
             // blob stuff
             var blob = new Blob([event.target.result]); // create blob...
             window.URL = window.URL || window.webkitURL;
