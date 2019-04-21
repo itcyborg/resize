@@ -66,10 +66,9 @@ class ImageResize{
             var image = new Image();
             image.src = blobURL;
             //preview.appendChild(image); // preview commented out, I am using the canvas instead
-            var l=this;
-            image.onload = function() {
+            image.onload = () => {
                 // have to wait till it's loaded
-                var resized = l.resizeMe(image); // send it to canvas
+                var resized = this.resizeMe(image); // send it to canvas
                 // var resized = ; // send it to canvas
                 var newinput = document.createElement("input");
                 newinput.type = 'hidden';
